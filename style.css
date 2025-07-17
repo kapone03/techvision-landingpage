@@ -1,0 +1,156 @@
+:root {
+  /* CSS variables for consistent theming and easier maintenance */
+  --color-principal: rgba(23,30,74,255);
+  --color-secundario: #c6d8e4;
+  --color-fondo: #ecf0f1;
+  --fuente: 'Roboto', sans-serif;
+}
+
+* {
+  /* Ensures consistent box sizing (padding and borders included in total width/height) */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-principal);
+  line-height: 1.6; /* Improves text readability */
+}
+
+header {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+#imagen_principal {
+  width: 120px;
+  margin-top: 1rem;
+  border-radius: 50%; /* Creates a circular image */
+}
+
+nav ul {
+  display: flex; /* Makes nav items align horizontally */
+  justify-content: center; /* Centers nav items horizontally */
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* Removes underline from links */
+  padding: 0.5rem 1rem;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+  color: var(--color-secundario);
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid; /* CSS Grid for layout of speaker cards */
+  gap: 1.5rem; /* Space between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Responsive layout: fills space with flexible columns */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* Prevents content from overflowing the border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover animation */
+  text-align: center;
+  padding: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto; /* Maintains aspect ratio */
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem; /* Even spacing between form fields */
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Slightly rounded corners */
+  font-family: var(--fuente);
+}
+
+button {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor on hover to indicate interactivity */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+footer {
+  background-color: var(--color-principal);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive design adjustments */
+
+/* Stack navigation items vertically on smaller screens */
+@media (max-width: 1024px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Ensure header and footer text stays centered on tablets */
+@media (max-width: 768px) {
+  header, footer {
+    text-align: center;
+  }
+}
+
+/* For small mobile devices, make grid items stack vertically */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
+}

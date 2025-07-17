@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riwi Conference</title>
+
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Import Google Fonts for consistent typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Riwitalk2025</h1>
+
+    <!-- Main image/logo for the conference -->
+    <img src="riwiblanco.png" alt="Logo de la conferencia" id="imagen_principal" />
+
+    <!-- Navigation menu to jump to specific sections on the same page -->
+    <nav>
+      <ul>
+        <li><a href="#introduccion">start</a></li> <!-- Link to introduction section -->
+        <li><a href="#conferencistas">speakers</a></li> <!-- Link to speaker profiles -->
+        <li><a href="#registro">form</a></li> <!-- Link to registration form -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Introduction section with brief event description -->
+    <section id="introduccion">
+      <h2>Welcome to the Conference</h2>
+      <p>Join the most anticipated technology event of the year with world-class experts.</p>
+    </section>
+
+    <!-- Speaker showcase section using card layout -->
+    <section id="conferencistas" class="grid">
+      <h2>Guest Speakers</h2>
+
+      <!-- Speaker Card: Guido van Rossum -->
+      <div class="card">
+        <img src="guido.jpg" alt="guido van rossum" class="foto" />
+        <h3>guido van rossum</h3>
+        <p>Artificial Intelligence Specialist with more than 15 years of experience.</p>
+      </div>
+
+      <!-- Speaker Card: Ing. Dalton Torres -->
+      <div class="card">
+        <img src="dalto.jpg" alt="Ing. Dalton Torres" class="foto" />
+        <h3>Ing. Dalton Torres</h3>
+        <p>Cybersecurity expert and international university professor.</p>
+      </div>
+
+      <!-- Speaker Card: Lic. elon musk -->
+      <div class="card">
+        <img src="elon.jpg" alt="Lic. elon musk" class="foto" />
+        <h3>Lic. elon musk</h3>
+        <p>Technology disseminator and leader of free software communities.</p>
+      </div>
+    </section>
+
+    <!-- Registration form to collect user input -->
+    <section id="registro">
+      <h2>Registration Form</h2>
+      <form>
+        <!-- Input field for the user's full name -->
+        <label for="nombre">name:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <!-- Input field for user's email address with validation -->
+        <label for="correo">email:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <!-- Optional message textarea to allow personalized messages -->
+        <label for="mensaje">message:</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+        <!-- Submit button to send form data -->
+        <button type="submit">send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer section with copyright -->
+    <p>&copy; 2025 Riwi Conference. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
